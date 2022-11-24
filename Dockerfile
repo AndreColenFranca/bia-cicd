@@ -9,7 +9,7 @@ RUN npm install --loglevel=error
 
 COPY . .
 
-RUN REACT_APP_API_URL=http://localhost:3001 SKIP_PREFLIGHT_CHECK=true npm run build --prefix client
+RUN REACT_APP_API_URL=http://wordpress-alb-1184270225.us-east-1.elb.amazonaws.com SKIP_PREFLIGHT_CHECK=true npm run build --prefix client
 
 RUN mv client/build build
 
