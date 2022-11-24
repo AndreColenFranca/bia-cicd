@@ -1,4 +1,4 @@
-#FROM 255467624306.dkr.ecr.us-east-1.amazonaws.com/bia
+FROM 255467624306.dkr.ecr.us-east-1.amazonaws.com
 
 RUN npm install -g npm@latest --loglevel=error
 WORKDIR /usr/src/app
