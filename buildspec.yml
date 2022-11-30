@@ -1,5 +1,4 @@
 version: 0.2
-
 phases:
   pre_build:
     commands:
@@ -13,7 +12,7 @@ phases:
     commands:
       - echo Build iniciado em `date`
       - echo Gerando imagem da BIA..........
-      - docker build -t $REPOSITORY_URI .
+      - docker build -t $REPOSITORY_URI:latest .
       - docker tag $REPOSITORY_URI:latest $REPOSITORY_URI:$IMAGE_TAG
   post_build:
     commands:
