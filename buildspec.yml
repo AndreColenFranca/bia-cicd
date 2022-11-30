@@ -13,7 +13,7 @@ phases:
     commands:
       - echo Build iniciado em `date`
       - echo Gerando imagem da BIA.....
-      - docker build -t 255467624306.dkr.ecr.us-east-1.amazonaws.com/bia .
+      - docker build -t $REPOSITORY_URI .
       - docker tag $REPOSITORY_URI:latest $REPOSITORY_URI:$IMAGE_TAG
   post_build:
     commands:
