@@ -1,5 +1,5 @@
 FROM 255467624306.dkr.ecr.us-east-1.amazonaws.com/bia
-
+#
 RUN npm install -g npm@latest --loglevel=error
 WORKDIR /usr/src/app
 
@@ -9,7 +9,7 @@ RUN npm install --loglevel=error
 
 COPY . .
 
-RUN REACT_APP_API_URL=http://wordpress-alb-1184270225.us-east-1.elb.amazonaws.com SKIP_PREFLIGHT_CHECK=true npm run build --prefix client
+RUN REACT_APP_API_URL=http://bia-git-alb-1641412083.us-east-1.elb.amazonaws.com SKIP_PREFLIGHT_CHECK=true npm run build --prefix client
 
 RUN mv client/build build
 
