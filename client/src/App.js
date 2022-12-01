@@ -100,7 +100,7 @@ function App() {
                   onToggle={toggleReminder}
                 />
               ) : (
-                "Fim Teste Scale - Cadastre Uma Tarefa >>"
+                "*** Fim Teste Scale - Cadastre Uma Tarefa ***"
               )}
             </>
           )}
